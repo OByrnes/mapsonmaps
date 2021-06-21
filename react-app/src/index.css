@@ -1,1 +1,41 @@
-/* TODO Add site wide styles */
+.header {
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #252525;
+}
+body{
+    margin: 0;
+}
+nav{
+    position: absolute;
+    top: 0px;
+    padding-bottom: 10px;
+    width: 100%;
+    height: 100px;
+    background-color: #E4E4E4;
+}
+nav ul{
+    
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+a{
+    text-decoration: none;
+}
+nav li{
+    list-style: none;
+}
+
+.logo{
+    max-height: 80px ;
+}
+.nav-header{
+    display: flex;
+    width: 400px;
+    justify-content: space-evenly;
+    align-items: center;
+}

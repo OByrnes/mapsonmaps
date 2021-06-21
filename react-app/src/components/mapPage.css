@@ -1,0 +1,8 @@
+.map_page__container{
+    display: flex;
+    flex-direction: row;
+}
+.steps{
+    display: flex;
+    flex-direction: column;
+}
