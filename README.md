@@ -1,4 +1,8 @@
 # Example of Basic Usage of Google Maps with React
+
+This project is only to demonstrate how to implement Google maps with React.
+
+
 ## Step One: Create a Google API key
 to create an API key you must first create a project:
 
