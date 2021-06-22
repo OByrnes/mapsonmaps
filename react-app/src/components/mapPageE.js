@@ -1,8 +1,7 @@
-import React, { useEffect, useState, useCallback } from 'react';
-import { useDispatch, useSelector } from "react-redux";
+import React, { useState, useCallback } from 'react';
+import { useSelector } from "react-redux";
 import { GoogleMap, useJsApiLoader, Marker, InfoWindow, DirectionsService, DirectionsRenderer } from '@react-google-maps/api';
 
-import parse from 'html-react-parser';
 import "./mapPage.css"
 
 

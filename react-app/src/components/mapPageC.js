@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from "react-redux";
+import React, { useState, useCallback } from 'react';
+import { useSelector } from "react-redux";
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
 
 
@@ -22,7 +22,7 @@ const { isLoaded } = useJsApiLoader({
 
   const [map, setMap] = useState(null)
   
-  const onUnmount = React.useCallback(function callback(map) {
+  const onUnmount = useCallback(function callback(map) {
     setMap(null)
   }, [])
  

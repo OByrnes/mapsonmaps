@@ -14,9 +14,7 @@ const FrontPage = () => {
         dispatch(getAllMarkers())
     },[])
     const [current, setCurrent] = useState(1)
-    // useEffect(()=>{
-    //     console.log(current, "this is current", current===1)
-    // },[current])
+    
     
     return (
         <div className="front-page__container">

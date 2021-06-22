@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from "react-redux";
+import React, { useState } from 'react';
+import { useSelector } from "react-redux";
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
 import markMarker from "../images/mark.jpeg"
 
@@ -8,6 +8,8 @@ const MapPageB= () => {
 const [currentPosition, setCurrentPosition] = useState({lat:43.11016617798622,lng:-89.48826131670266})
 
 const k = useSelector(state => state.maps.markers.k)
+
+
 const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
     googleMapsApiKey: k

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
 
 
@@ -6,6 +7,7 @@ import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
 const MapPageA= () => {
     
 const [currentPosition, setCurrentPosition] = useState({lat:43.11016617798622,lng:-89.48826131670266})
+
 
 const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',

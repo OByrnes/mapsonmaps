@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from "react-redux";
+import React, { useState, useCallback } from 'react';
+import { useSelector } from "react-redux";
 import Geocode from 'react-geocode'
 import { GoogleMap, useJsApiLoader, Marker, InfoWindow} from '@react-google-maps/api';
 
@@ -52,7 +52,7 @@ const { isLoaded } = useJsApiLoader({
 
   const [map, setMap] = useState(null)
   
-  const onUnmount = React.useCallback(function callback(map) {
+  const onUnmount = useCallback(function callback(map) {
     setMap(null)
   }, [])
  
@@ -76,7 +76,7 @@ const { isLoaded } = useJsApiLoader({
           onUnmount={onUnmount}
           >
                {markers.map((marker) => (
-              <>
+            
               <Marker key={marker.id} 
               position={{lat:marker.lat, lng:marker.lng}}
               icon={{
@@ -96,7 +96,7 @@ const { isLoaded } = useJsApiLoader({
               </InfoWindow>
               </Marker>
              
-             </>
+            
            ))}
 
         </GoogleMap>:null}
