@@ -14,7 +14,7 @@ const FrontPage = () => {
         dispatch(getAllMarkers())
     },[])
     const [current, setCurrent] = useState(1)
-    
+    console.log(process.env.REACT_APP_MAPS_KEY)
     
     return (
         <div className="front-page__container">
