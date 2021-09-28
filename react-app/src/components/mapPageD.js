@@ -9,6 +9,7 @@ const MapPageD= () => {
     
 const [currentPosition, setCurrentPosition] = useState(null)
 const [address, setAddress] = useState('')
+const [infoWin, setInfoWin] = useState(null)
 
 const k = useSelector(state => state.maps.markers.k)
 const markers = useSelector(state => state.maps.markers.markers)
@@ -23,6 +24,9 @@ Geocode.setLocationType("ROOFTOP");
 // Enable or disable logs. Its optional.
 Geocode.enableDebug();
 
+const changeInfoWin = (marker) => {
+  setInfoWin(marker)
+}
 
 // Get latitude & longitude from address
 const makeMap = (e) => {
@@ -87,17 +91,19 @@ const { isLoaded } = useJsApiLoader({
                 strokeColor: 'gold',
                 strokeWeight: 2
               }}
+              onClick = {()=>changeInfoWin(marker)}
               streetView={false} >
                  
-              <InfoWindow position={{lat:marker.lat, lng:marker.lng}} >
-                <div>
-                  <span style={{color: `${marker.color}`}}>{marker.name}</span>
-                </div>
-              </InfoWindow>
+              
               </Marker>
              
             
            ))}
+          {infoWin && <InfoWindow position={{lat:infoWin.lat, lng:infoWin.lng}} >
+                <div>
+                  <span style={{color: `${infoWin.color}`}}>{infoWin.name}</span>
+                </div>
+              </InfoWindow>}
 
         </GoogleMap>:null}
         </div>

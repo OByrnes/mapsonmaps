@@ -9,10 +9,10 @@ const MapPageA= () => {
 const [currentPosition, setCurrentPosition] = useState({lat:43.11016617798622,lng:-89.48826131670266})
 
 
-const { isLoaded } = useJsApiLoader({
+const { isLoaded } = process.env.REACT_APP_MAPS_KEY? useJsApiLoader({
     id: 'google-map-script',
     googleMapsApiKey: process.env.REACT_APP_MAPS_KEY
-  })
+  }): {isLoaded: false}
   
   const containerStyle = {
     width: '800px',
