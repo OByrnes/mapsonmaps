@@ -1,3 +1,4 @@
+ARG REACT_APP_MAPS_KEY="1234"
 FROM node:12 AS build-stage
 
 WORKDIR /react-app
