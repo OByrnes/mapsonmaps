@@ -12,8 +12,8 @@ jobs:
         REACT_APP_MAPS_KEY: ${{ secrets.MAPS_KEY }}
     steps:
     - uses: actions/checkout@v2
-    - env: REACT_APP_MAPS_KEY:${{ secrets.MAPS_KEY}}
     - name: Login to Heroku Container registry
+    - env: REACT_APP_MAPS_KEY:${{ secrets.MAPS_KEY}}
       run: heroku container:login
     - name: Build and push
       run: heroku container:push -a mapsonmaps web
