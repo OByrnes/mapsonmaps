@@ -6,7 +6,7 @@ COPY react-app/. .
 
 # You have to set this because it should be set during build time.
 ENV REACT_APP_BASE_URL=https://mapsonmaps.herokuapp.com
-ENV REACT_APP_MAPS_KEY='${{ secrets.MAPS_KEY}}'
+ENV REACT_APP_MAPS_KEY=default
 
 # Build our React App
 RUN npm install
