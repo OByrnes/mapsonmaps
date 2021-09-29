@@ -19,11 +19,11 @@ const FrontPage = () => {
     return (
         <div className="front-page__container">
             <ul id="tabs">
-                <li id={current===1? 'current' : 'notCurrent'} onClick={()=>setCurrent(1)}><div >One</div></li>
-                <li id={current===2? 'current' : 'notCurrent'} onClick={()=>setCurrent(2)}><div >Two</div></li>
-                <li id={current===3? 'current' : 'notCurrent'} onClick={()=>setCurrent(3)}><div >Three</div></li>
-                <li id={current===4? 'current' : 'notCurrent'} onClick={()=>setCurrent(4)}><div >Four</div></li>
-                <li id={current===5? 'current' : 'notCurrent'} onClick={()=>setCurrent(5)}><div >Five</div></li>
+                <li id={current===1? 'current' : 'notCurrent'} onClick={()=>setCurrent(1)}><div > <i className="fas fa-map"></i>   One</div></li>
+                <li id={current===2? 'current' : 'notCurrent'} onClick={()=>setCurrent(2)}><div ><i className="fas fa-map"></i>Two</div></li>
+                <li id={current===3? 'current' : 'notCurrent'} onClick={()=>setCurrent(3)}><div ><i className="fas fa-map"></i> Three</div></li>
+                <li id={current===4? 'current' : 'notCurrent'} onClick={()=>setCurrent(4)}><div ><i className="fas fa-map"></i> Four</div></li>
+                <li id={current===5? 'current' : 'notCurrent'} onClick={()=>setCurrent(5)}><div > <i className="fas fa-map"></i> Five</div></li>
 
             </ul>
             <div>
