@@ -11,8 +11,6 @@ jobs:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
     steps:
     - uses: actions/checkout@v2
-    - with:
-          args: "--build-arg REACT_APP_MAPS_KEY="${{ secrets.MAPS_KEY }}
     - name: Login to Heroku Container registry
       run: heroku container:login
     - name: Build and push
