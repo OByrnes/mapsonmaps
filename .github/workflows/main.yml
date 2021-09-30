@@ -6,7 +6,8 @@ on:
       - main
 jobs:
   build: 
-    build-arg: REACT_APP_MAPS_KEY=${{ secrets.MAPS_KEY }}
+    args: 
+      REACT_APP_MAPS_KEY:${{ secrets.MAPS_KEY }}
     runs-on: ubuntu-latest
     env:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
